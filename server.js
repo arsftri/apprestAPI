@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { listen } = require('express/lib/application');
 const app = express();
+const db = require('./database');
 
 //parse application/json
 app.use(bodyParser.urlencoded({extended: true})); 
