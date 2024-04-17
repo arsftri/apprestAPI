@@ -2,18 +2,18 @@
 var mysql = require('mysql');
 
 //buat koneksi database
-const conn = mysql.createConnection({
+const db = mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'',
     database:'perpustakaanuai'
 });
 
-conn.connect((err) =>{
+db.connect((err) =>{
     if(err) throw err;
     console.log('mysql terkoneksi');
 });
 
 //untuk export databasenya
-module.exports = conn;
+module.exports = db;
 
